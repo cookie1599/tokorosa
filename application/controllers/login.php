@@ -27,7 +27,7 @@ class Login extends CI_Controller{
 				'status' => "login"
 				);
 
-			$this->session->set_userdata($data_session);
+			$this->set_userdata($data_session);
 
 			redirect(base_url("admin"));
 
@@ -37,7 +37,7 @@ class Login extends CI_Controller{
 	}
 
 	function logout(){
-		$this->session->sess_destroy();
+		$this->sess_destroy();
 		redirect(base_url('login'));
 	}
 }
